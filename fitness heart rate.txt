@@ -1,0 +1,23 @@
+# include <stdio.h>
+int main(){
+    int i,n;
+    int heartbeat,max = 0; 
+     int high  = 0;
+    
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){
+      scanf("%d",&heartbeat);
+     if(heartbeat>max){
+         max= heartbeat;
+     }
+      
+      if(heartbeat>=140){
+          high++;
+      }
+}
+
+    printf("Max Heart Beat :%d\n",max);
+    printf("Danger Reading:%d",high);
+    return 0;
+}
