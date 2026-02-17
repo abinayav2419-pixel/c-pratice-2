@@ -1,0 +1,23 @@
+# include <stdio.h>
+int main(){
+    int i,n;
+    int loss; 
+     int heavylossdays=0 ;
+     int total = 0;
+    
+    scanf("%d",&n);
+   
+    
+    for(i=0;i<n;i++){
+      scanf("%d",&loss);
+    
+        total = total+loss;
+        if(loss>=100){
+            heavylossdays++;
+        }
+    
+}
+    printf("Total loss:%d\n",total);
+    printf("Heavy loss Days:%d",heavylossdays);
+    return 0;
+}
