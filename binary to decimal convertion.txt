@@ -1,0 +1,19 @@
+# include <stdio.h>
+int main(){
+    int b ,digit ,decimal = 0,base;
+   
+    
+    scanf("%d",&b);
+    
+    for( base=1 ; b !=0;base*=2){
+       digit = b % 10;
+       decimal+=digit*base;
+       b /=10;
+    }
+    printf("%d",decimal);
+    return 0;
+}
+        
+        
+    
+   
