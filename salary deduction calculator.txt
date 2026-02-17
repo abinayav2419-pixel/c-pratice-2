@@ -1,0 +1,13 @@
+# include <stdio.h>
+int main(){
+    int i,salary,days;
+    
+    scanf("%d",&salary);
+    scanf("%d",&days);
+    
+    for(i=0;i<days;i++){
+      salary-=100;  
+    }
+    printf("final salary:%d",salary);
+    return 0;
+}
