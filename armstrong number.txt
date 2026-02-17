@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, original, temp;
+    int digits = 0;
+    int result = 0;
+
+    scanf("%d", &num);
+
+    original = num;
+
+    // Count number of digits using for loop
+    for(temp = num; temp > 0; temp /= 10) {
+        digits++;
+    }
+
+    // Calculate sum of digit^digits using for loop
+    for(temp = num; temp > 0; temp /= 10) {
+        int digit = temp % 10;
+        result += pow(digit, digits);
+    }
+
+    if(result == original)
+        printf("Armstrong Number");
+    else
+        printf("Not Armstrong Number");
+
+    return 0;
+}
