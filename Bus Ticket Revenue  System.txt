@@ -1,0 +1,16 @@
+# include <stdio.h>
+int main(){
+    int i,n;
+    int passengers,amount,total =0 ;
+    
+    scanf("%d",&n);
+   
+    
+    for(i=0;i<n;i++){
+      scanf("%d",&amount);
+        total +=amount;
+    
+}
+    printf("Total collection:%d",total);
+     return 0;
+}
