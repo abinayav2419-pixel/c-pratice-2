@@ -1,0 +1,24 @@
+# include <stdio.h>
+int main(){
+    int i,n;
+    int call;
+    int total = 0; 
+     int hours= 0;
+    
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){
+      scanf("%d",&call);
+        total += call; 
+         
+     
+      
+      if(call>=40){
+          hours++;
+      }
+}
+
+    printf("Total calls:%d\n",total);
+    printf("overloded Hours:%d",hours);
+    return 0;
+}
