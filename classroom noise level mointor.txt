@@ -1,0 +1,23 @@
+# include <stdio.h>
+int main(){
+    int i,n;
+    int noise,max = 0; 
+     int noisyperiods = 0;
+    
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){
+      scanf("%d",& noise);
+     if(noise>max){
+         max= noise;
+     }
+      
+      if(noise>70){
+          noisyperiods++;
+      }
+}
+
+    printf("Maximum noise :%d\n",max);
+    printf("Noisy Periods:%d",noisyperiods);
+    return 0;
+}
