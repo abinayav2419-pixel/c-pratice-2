@@ -1,0 +1,24 @@
+# include <stdio.h>
+int main(){
+    int i,n;
+    int risk;
+    int total = 0; 
+     int highrisk= 0;
+    
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){
+      scanf("%d",&risk);
+        total += risk; 
+         
+     
+      
+      if(risk>=50){
+          highrisk++;
+      }
+}
+
+    printf("Total Risk:%d\n",total);
+    printf("high risk sessions:%d",highrisk);
+    return 0;
+}
