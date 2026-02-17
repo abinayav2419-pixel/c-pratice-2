@@ -1,0 +1,29 @@
+# include <stdio.h>
+int main(){
+    int i,n,cash;
+    int expense;
+    int riskcount = 0; 
+    int total = 0;
+    
+    
+    scanf("%d",&cash);
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){
+      scanf("%d",&expense);
+      
+      total +=expense;
+      
+      if(expense>=5000)
+        riskcount++;
+    
+}
+ int remaining= cash-total;
+ 
+ 
+ printf("Remaining Cash:%d\n",remaining);
+ printf("Risk Count:%d",riskcount);
+ 
+ return 0;
+ }
+     
