@@ -1,0 +1,24 @@
+# include <stdio.h>
+int main(){
+    int i,n;
+    int units;
+    int total = 0; 
+     int hours= 0;
+    
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){
+      scanf("%d",&units);
+        total += units; 
+         
+     
+      
+      if(units>=5){
+          hours++;
+      }
+}
+
+    printf("Total units:%d\n",total);
+    printf("Spike Hours:%d",hours);
+    return 0;
+}
