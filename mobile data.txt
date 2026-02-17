@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int data, n, use;
+    int success = 0;
+
+    
+    
+    scanf("%d", &data);
+    scanf("%d", &n);
+
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &use);
+
+        if (data >= use) {
+            data -= use;   
+            success++;     
+        } else {
+            break;        
+        }
+    }
+
+
+    printf("Remaining Data: %d\n", data);
+    printf("Successful Days: %d", success);
+
+    return 0;
+}
