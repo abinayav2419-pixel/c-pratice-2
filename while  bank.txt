@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int cash, N;
+    
+ 
+    scanf("%d", &cash);
+    scanf("%d", &N);
+    
+    int consumption[N];
+    
+   
+    for(int i = 0; i < N; i++) {
+        scanf("%d", &consumption[i]);
+    }
+    
+    int withdrawals = 0;
+    int i = 0;
+    
+   
+    while(i < N && cash >= consumption[i]) {
+        cash -= consumption[i];
+        withdrawals ++;
+        i++;
+    }
+    
+   
+    printf("Successful Withdrawals: %d\n", withdrawals );
+    printf("Remaining Cash: %d\n", cash);
+    
+    return 0;
+}
