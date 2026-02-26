@@ -1,0 +1,28 @@
+# include <stdio.h>
+int main(){
+int n;
+int i=0;
+int hours =0;
+int inactive=0;
+scanf("%d",&n);
+
+while(i<n){
+    scanf("%d",&hours);
+    
+    if(hours==0){
+        inactive++;
+    }
+    i++;
+
+}
+
+printf("Inactive Week:%d\n",inactive);
+if(inactive>=3){
+    printf("Risk Status:High");
+}else{
+    printf("Risk Status:Low");
+}
+return 0;
+}
+
+
