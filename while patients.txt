@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int maxCapacity, N;
+    scanf("%d", &maxCapacity);
+    scanf("%d", &N);
+
+    int arrivals[N];
+    for(int i = 0; i < N; i++) {
+        scanf("%d", &arrivals[i]);
+    }
+
+    int treated = 0;
+    int rejected = 0;
+    int i = 0;
+
+    while(i < N) {
+        if(treated + arrivals[i] <= maxCapacity) {
+            treated += arrivals[i];
+        } else {
+            int remainingCapacity = maxCapacity - treated;
+
+            if(remainingCapacity > 0) {
+                treated += remainingCapacity;
+                rejected += (arrivals[i] - remainingCapacity);
+            } else {
+                rejected += arrivals[i];
+            }
+        }
+        i++;
+    }
+
+    printf("Treated Patients: %d\n", treated);
+    printf("Rejected Patients: %d\n", rejected);
+
+    return 0;
+}
