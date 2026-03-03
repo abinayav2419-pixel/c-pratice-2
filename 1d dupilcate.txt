@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter number of customers: ");
+    scanf("%d", &n);
+
+    int id[n];
+
+    printf("Enter customer IDs:\n");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &id[i]);
+    }
+
+    printf("Duplicate customer IDs are:\n");
+
+    for(int i = 0; i < n; i++) {
+        for(int j = i + 1; j < n; j++) {
+            if(id[i] == id[j]) {
+                printf("%d\n", id[i]);
+                break;  
+            }
+        }
+    }
+
+    return 0;
+}
